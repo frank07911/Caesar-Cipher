@@ -7,19 +7,19 @@ int main(){
 	char cipher[100];
 	int num,mod,i;
 	bool loop=true;
-	cout<<"¦¹µ{¦¡¬°³ÍÂÄ±K½X¥[¸Ñ±K\n";
+	cout<<"æ­¤ç¨‹å¼ç‚ºå‡±è–©å¯†ç¢¼åŠ è§£å¯†\n";
 	while(loop){
-		cout<<"¥[±K½Ð¿é¤J1"<<endl;
-		cout<<"¸Ñ±K½Ð¿é¤J2"<<endl;
-		cout<<"¼É¤O¯}¸Ñ¿é¤J3"<<endl;
-		cout<<"°h¥X½Ð¿é¤J4"<<endl;
+		cout<<"åŠ å¯†è«‹è¼¸å…¥1"<<endl;
+		cout<<"è§£å¯†è«‹è¼¸å…¥2"<<endl;
+		cout<<"æš´åŠ›ç ´è§£è¼¸å…¥3"<<endl;
+		cout<<"é€€å‡ºè«‹è¼¸å…¥4"<<endl;
 
 		cin>>num;
 		switch(num){
 			case 1:
-				cout<<"¿é¤J¤å¦r=>";
+				cout<<"è¼¸å…¥æ–‡å­—=>";
 				cin>>cipher;
-				cout<<"¿é¤J°¾²¾¶q=>";
+				cout<<"è¼¸å…¥åç§»é‡=>";
 				cin>>mod;
 				for(int i=0;i<strlen(cipher);i++){
 					if(cipher[i]>='A'and cipher[i]<='Z')
@@ -37,9 +37,9 @@ int main(){
 				break;
 				
 			case 2:
-				cout<<"¿é¤J±K¤å=>";
+				cout<<"è¼¸å…¥å¯†æ–‡=>";
 				cin>>cipher;
-				cout<<"¿é¤J°¾²¾¶q=>";
+				cout<<"è¼¸å…¥åç§»é‡=>";
 				cin>>mod;
 				for(int i=0;i<strlen(cipher);i++){
 					if(cipher[i]>='A'and cipher[i]<='Z')
@@ -56,23 +56,23 @@ int main(){
 				break;
 
 			case 3:
-				cout<<"¿é¤J±K¤å=>";
+				cout<<"è¼¸å…¥å¯†æ–‡=>";
 				cin>>cipher;
 				for (mod = 0; mod < 26; ++mod) 
 				{  
-       				string decrypted = cipher;  
-        			for (int i = 0; i < decrypted.length(); ++i) {
-	        			if (decrypted[i]>='A' and decrypted[i] <= 'Z')
+	       				string decrypted = cipher;  
+	        			for (int i = 0; i < decrypted.length(); ++i) {
+		        			if (decrypted[i]>='A' and decrypted[i] <= 'Z')
 						{
-	                		decrypted[i]=((decrypted[i]-'A')+(26-mod))%26+'A';
-	            		} 
+		                		decrypted[i]=((decrypted[i]-'A')+(26-mod))%26+'A';
+		            			} 
 						else if (decrypted[i]>='a'and decrypted[i]<='z') 
 						{
-	                		decrypted[i]=((decrypted[i]-'a')+(26 - mod))%26+'a';
-	            		}	
-        			}
-        			cout << "key " << mod << ": " << decrypted << endl;
-    			}	
+		                		decrypted[i]=((decrypted[i]-'a')+(26 - mod))%26+'a';
+		            			}	
+	        			}
+	        			cout << "key " << mod << ": " << decrypted << endl;
+    				}	
 				break;
 				
 			case 4:
@@ -80,7 +80,7 @@ int main(){
 				break;
 				
 			default:
-				cout<<"¿é¤J¿ù»~";
+				cout<<"è¼¸å…¥éŒ¯èª¤";
 				break;
 		}
 	}
